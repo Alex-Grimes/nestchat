@@ -14,8 +14,8 @@ import { Socket, Server } from 'socket.io';
     origin: '*',
   },
 })
-export class AppGateway implements OnGatewayInit, OnGatewayConnection, OnGatewayDisconnect {
-
+export class AppGateway
+  implements OnGatewayInit, OnGatewayConnection, OnGatewayDisconnect {
   @WebSocketServer() server: Server;
   private logger: Logger = new Logger('AppGateway');
 
@@ -35,5 +35,4 @@ export class AppGateway implements OnGatewayInit, OnGatewayConnection, OnGateway
   handleConnection(client: Socket, ...args: any[]) {
     this.logger.log(`Client connected: ${client.id}`);
   }
-
 }
