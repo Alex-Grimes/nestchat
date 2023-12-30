@@ -1,0 +1,8 @@
+#messaged{
+    height: 300px;
+    overflow-y: scroll;
+}
+
+#app{
+    margin-bottom: 2rem;
+}
